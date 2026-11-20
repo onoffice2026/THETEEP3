@@ -300,4 +300,53 @@ html[data-theme=editorial] .t3st{display:none}
 /* reading pages: calmer */
 .lede,article p{animation:none}
 @media(max-width:700px){.t3st{height:200px}.t3bowl{width:330px;height:200px;margin:-100px 0 0 -165px}}
+/* ===== [29zz708] her 03:52: goals on the pitch, flags on spheres, THETEEP3 written in one piece, profile rankings animated,
+   the demo's 3D perspective (tilted slabs, the floating rating block, tiles with depth), something 3D on every page ===== */
+.logo .t3cube{display:none}
+/* flags = spheres turning under a fixed light */
+.edf a{position:relative;overflow:hidden;animation:t3sph 5s ease-in-out infinite;box-shadow:inset -4px -5px 9px rgba(0,0,0,.55),0 6px 10px rgba(0,0,0,.5)!important}
+.edf a::after{content:"";position:absolute;inset:0;border-radius:50%;pointer-events:none;background:radial-gradient(circle at 32% 26%,rgba(255,255,255,.8),rgba(255,255,255,.15) 26%,transparent 44%),radial-gradient(circle at 50% 50%,transparent 52%,rgba(0,0,0,.55) 100%)}
+.edf a svg{animation:t3roll 5s ease-in-out infinite}
+.edf a:nth-child(2n),.edf a:nth-child(2n) svg{animation-delay:-1.2s}.edf a:nth-child(3n),.edf a:nth-child(3n) svg{animation-delay:-2.5s}
+.edf a.on{transform:translateY(-4px) scale(1.18)}
+@keyframes t3sph{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes t3roll{0%,100%{transform:translateX(-14%) scale(1.25)}50%{transform:translateX(14%) scale(1.25)}}
+/* goals on the pitch */
+.t3grass{transform-style:preserve-3d}
+.t3goal{position:absolute;top:50%;width:22px;height:58px;margin-top:-29px;border:3px solid #f8fafc;border-bottom:0;box-sizing:border-box;
+background:repeating-linear-gradient(0deg,rgba(255,255,255,.35) 0 1px,transparent 1px 6px),repeating-linear-gradient(90deg,rgba(255,255,255,.35) 0 1px,transparent 1px 6px);box-shadow:0 0 8px rgba(255,255,255,.4)}
+.t3goal.gl{left:0;transform-origin:0 50%;transform:rotateY(-90deg)}.t3goal.gr{right:0;transform-origin:100% 50%;transform:rotateY(90deg)}
+.t3area{position:absolute;top:50%;width:46px;height:120px;margin-top:-60px;border:2px solid rgba(255,255,255,.6)}.t3area.al{left:-2px;border-left:0}.t3area.ar{right:-2px;border-right:0}
+/* the demo's perspective: the rating block floats turned, the tables are lifted slabs, the tiles have depth */
+.rtg678{transform-style:preserve-3d;animation:t3mono 7s ease-in-out infinite;box-shadow:-24px 34px 60px rgba(0,0,0,.6),inset 0 1px 0 rgba(255,255,255,.18)!important;position:relative;overflow:hidden}
+.rtg678::after{content:"";position:absolute;top:0;bottom:0;left:0;width:30%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.14),transparent);animation:t3shine 5s ease-in-out infinite;pointer-events:none}
+.rtg678 .r1,.rtg678 .rv{text-shadow:0 5px 0 rgba(161,98,7,.9),0 18px 28px rgba(0,0,0,.5)}
+@keyframes t3mono{0%,100%{transform:perspective(900px) rotateY(-16deg) rotateX(7deg) translateY(0)}50%{transform:perspective(900px) rotateY(-6deg) rotateX(2deg) translateY(-10px)}}
+@keyframes t3shine{0%{transform:translateX(-120%) skewX(-20deg)}60%,100%{transform:translateX(320%) skewX(-20deg)}}
+.edtd{transform-origin:50% 0;animation:t3slab 9s ease-in-out infinite;border-radius:16px;padding:10px 12px 8px;background:linear-gradient(180deg,rgba(19,26,51,.92),rgba(11,16,34,.92));
+box-shadow:0 16px 0 #03050b,0 34px 50px rgba(0,0,0,.55)}
+.edtd:nth-child(2n){animation-delay:-3s}
+@keyframes t3slab{0%,100%{transform:perspective(1200px) rotateX(10deg) rotateY(0)}50%{transform:perspective(1200px) rotateX(7deg) rotateY(2deg)}}
+.card,.box,.pred{box-shadow:0 10px 0 #03050b,0 22px 34px rgba(0,0,0,.5),inset 0 1px 0 rgba(255,255,255,.12)}
+.edprob li{border-radius:12px;padding:10px 12px!important;margin:0 0 12px;background:linear-gradient(160deg,#16213d,#0b1226);box-shadow:0 8px 0 #03050b,0 18px 26px rgba(0,0,0,.5);border:1px solid rgba(163,230,53,.25)!important;animation:t3in .8s cubic-bezier(.2,.8,.2,1) backwards,t3bob 4.4s ease-in-out .8s infinite}
+.edprob li:nth-child(2n){animation-delay:.08s,-1.4s}.edprob li:nth-child(3n){animation-delay:.16s,-2.8s}
+@keyframes t3bob{0%,100%{transform:translateY(0) rotateX(0)}50%{transform:translateY(-6px) rotateX(5deg)}}
+/* profile rankings: cards flip in one by one, float, the index bars grow */
+.edpr{perspective:1300px}
+.edpc{transform-style:preserve-3d;animation:t3card 1s cubic-bezier(.2,.8,.2,1) backwards,t3pfl 8s ease-in-out 1s infinite;box-shadow:0 12px 0 #03050b,0 26px 40px rgba(0,0,0,.55),0 0 0 1px rgba(103,232,249,.12)}
+.edpc:nth-child(2){animation-delay:.15s,-1s}.edpc:nth-child(3){animation-delay:.3s,-2s}.edpc:nth-child(4){animation-delay:.45s,-3s}.edpc:nth-child(5){animation-delay:.6s,-4s}
+.edpc:nth-child(6){animation-delay:.75s,-5s}.edpc:nth-child(7){animation-delay:.9s,-6s}.edpc:nth-child(8){animation-delay:1.05s,-7s}.edpc:nth-child(9){animation-delay:1.2s,-2.5s}
+.edpc:hover{animation-play-state:paused;transform:perspective(900px) rotateY(-8deg) rotateX(6deg) translateY(-8px)}
+@keyframes t3card{0%{opacity:0;transform:perspective(900px) rotateY(80deg) translateZ(-60px)}100%{opacity:1;transform:none}}
+@keyframes t3pfl{0%,100%{transform:perspective(900px) rotateX(0) rotateY(0) translateY(0)}50%{transform:perspective(900px) rotateX(5deg) rotateY(-4deg) translateY(-6px)}}
+.edpc .spix .ix .b i{transform-origin:0 50%;animation:t3bar 1.6s cubic-bezier(.2,.8,.2,1) backwards}
+@keyframes t3bar{0%{transform:scaleX(0)}100%{transform:scaleX(1)}}
+.edpc .rk{display:inline-block;animation:t3rk 6s ease-in-out infinite}
+@keyframes t3rk{0%,80%{transform:rotateY(0)}90%{transform:rotateY(180deg)}100%{transform:rotateY(360deg)}}
+/* every other page: a small 3D pitch strip with goals and the ball under the header */
+.t3st.mini{height:120px;margin:4px 0 10px}.t3st.mini .t3bowl{width:420px;height:150px;margin:-75px 0 0 -210px;animation:t3bowlm 12s ease-in-out infinite}
+.t3st.mini .t3tier{display:none}.t3st.mini .t3grass{left:0;right:0;top:0;bottom:0}
+@keyframes t3bowlm{0%,100%{transform:rotateX(66deg) rotateZ(-4deg)}50%{transform:rotateX(62deg) rotateZ(4deg)}}
+html[data-theme=editorial] .edtd,html[data-theme=editorial] .edprob li,html[data-theme=editorial] .edpc,html[data-theme=editorial] .rtg678{background:var(--pan);box-shadow:0 1px 0 var(--bd);animation:none}
+@media(max-width:700px){.t3st.mini{height:90px}.t3st.mini .t3bowl{width:300px;height:110px;margin:-55px 0 0 -150px}.rtg678,.edtd{animation:none}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
