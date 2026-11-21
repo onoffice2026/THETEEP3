@@ -232,12 +232,12 @@ background:linear-gradient(180deg,#ffffff 0%,#e6e9ed 38%,#a3aab3 52%,#d5d9de 70%
 .tb621b{position:absolute;top:7px;right:25px;width:12px;height:12px;padding:0;border:0;background:none;color:var(--mut);opacity:.45;font:10px/12px var(--ff);cursor:pointer;z-index:2;text-align:center}.tb621b:hover{opacity:1}[data-cp]>.lk502.fs{right:43px!important}[data-cp]>.lk502.ss{right:61px!important}[data-cp]>.lig{padding-right:78px}.tb621{position:fixed;inset:0;background:rgba(0,0,0,.55);z-index:50;display:flex;align-items:center;justify-content:center;padding:14px}.tb621 .tbw{position:relative;background:var(--bg2,#11162a);border:1px solid var(--line,#2a3350);border-radius:12px;padding:14px 16px;max-width:520px;width:100%;max-height:86vh;overflow:auto}.tb621 h3{margin:2px 0 8px}.tb621 table{width:100%}.tb621 td,.tb621 th{padding:3px 6px;text-align:right}.tb621 td:nth-child(2),.tb621 th:nth-child(2){text-align:left}.tb621 tr.me td{font-weight:800;color:var(--acc,#a5b4fc)}.tb621 .tbx{position:absolute;top:8px;right:10px;border:0;background:none;color:var(--mut);font-size:15px;cursor:pointer}html[data-theme=editorial] .tb621 .tbw{background:#fff}
 .g624{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:12px;margin:8px 0 16px}.g624 .spside{position:static;inset:auto;overflow:visible}.alte655{margin-top:34px;padding-top:14px;border-top:2px solid var(--bd)}.alte655>h2{color:var(--mut)}.g624 .spsc{overflow:visible;max-height:none}.ul622{display:inline-block;margin-left:6px;padding:0 6px;border-radius:999px;border:1px solid #f59e0b;color:#f59e0b;font-size:10.5px;font-weight:700;vertical-align:middle}
 /* ===== THETEEP3 3D layer [29zz739] (only on THETEEP3) ===== */
-#t3bg{position:fixed;inset:0;z-index:-2;pointer-events:none}#t3bg canvas{display:block;width:100vw;height:100vh}
+#t3bg{position:fixed;inset:0;z-index:-2;pointer-events:none;opacity:0;transition:opacity .6s ease}#t3bg.on{opacity:1}#t3bg canvas{display:block;width:100vw;height:100vh}
 #t3veil{position:fixed;inset:0;z-index:-1;pointer-events:none;--vt:.12;background:linear-gradient(180deg,rgba(6,9,20,var(--vt)) 0,rgba(6,9,20,var(--vt)) 24vh,rgba(6,9,20,.74) 60vh,rgba(6,9,20,.86) 100%)}
 html.t3gl body{background:transparent!important}
 html.t3gl body::before,html.t3gl body::after{display:none!important}
 html.t3gl{background:#060914;--pan:rgba(12,17,36,.74);--pan2:rgba(17,24,48,.80);--bd:rgba(255,255,255,.12)}
-html.t3gl header{background:rgba(6,9,20,.55)!important;-webkit-backdrop-filter:blur(12px) saturate(1.3);backdrop-filter:blur(12px) saturate(1.3);border-bottom:1px solid rgba(253,230,138,.18)!important}
+html.t3pre header,html.t3gl header{background:rgba(6,9,20,.55)!important;-webkit-backdrop-filter:blur(12px) saturate(1.3);backdrop-filter:blur(12px) saturate(1.3);border-bottom:1px solid rgba(253,230,138,.18)!important}
 html.t3gl footer{background:rgba(6,9,20,.7)}
 .t3stage{position:relative;height:30vh;min-height:150px;pointer-events:none}
 .t3stage.home{height:48vh;min-height:240px}
@@ -257,3 +257,7 @@ html.t3gl a.card,html.t3gl .edpc,html.t3gl .s671,html.t3gl .edtd{box-shadow:0 12
 .t3nm{color:var(--h,#fff);font-weight:inherit;white-space:nowrap}.t3nm b{color:var(--mov);font-weight:inherit}
 @media(max-width:700px){.t3stage{height:20vh;min-height:110px}.t3stage.home{height:30vh;min-height:170px}}
 @media(prefers-reduced-motion:reduce){.t3r{opacity:1;transform:none;transition:none}}
+/* [29zz742] first paint already in THETEEP3's look (no THETEEP2 flash); the page shows when the 3D layer is ready (at most 3 s) */
+html.t3pre{background:#060914}html.t3pre:not(.t3gl) body{background:#060914!important}html.t3pre body::before,html.t3pre body::after{display:none!important}
+html.t3pre main,html.t3pre footer{opacity:0;animation:t3safe .01s 3s forwards}html.t3pre.t3ready main,html.t3pre.t3ready footer{opacity:1;animation:none;transition:opacity .45s ease}
+@keyframes t3safe{to{opacity:1}}
