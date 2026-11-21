@@ -254,5 +254,6 @@ transition:transform .12s ease-out,box-shadow .3s!important;box-shadow:0 22px 44
 background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,255,.14),transparent 55%)}
 html.t3gl a.card,html.t3gl .edpc,html.t3gl .s671,html.t3gl .edtd{box-shadow:0 12px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.07)}
 .logo b{text-shadow:0 0 18px rgba(253,230,138,.35)}
+.t3nm{color:var(--h,#fff);font-weight:inherit;white-space:nowrap}.t3nm b{color:var(--mov);font-weight:inherit}
 @media(max-width:700px){.t3stage{height:20vh;min-height:110px}.t3stage.home{height:30vh;min-height:170px}}
 @media(prefers-reduced-motion:reduce){.t3r{opacity:1;transform:none;transition:none}}
