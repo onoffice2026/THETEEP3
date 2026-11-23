@@ -248,7 +248,7 @@ html.t3gl{background:#060914;--pan:rgba(12,17,36,.58);--pan2:rgba(17,24,48,.64);
 html.t3pre header,html.t3gl header{background:rgba(6,9,20,.55)!important;-webkit-backdrop-filter:blur(12px) saturate(1.3);backdrop-filter:blur(12px) saturate(1.3);border-bottom:1px solid rgba(253,230,138,.18)!important}
 html.t3gl footer{background:rgba(6,9,20,.7)}
 .t3stage{position:relative;height:30vh;min-height:150px;pointer-events:none}
-.t3stage.home{height:48vh;min-height:240px}
+.t3stage.home{height:14vh;min-height:90px}
 html:not(.t3gl) .t3stage{display:none}
 /* blocks rise in (3D) as they come into view */
 .t3r{opacity:0;transform:perspective(1100px) translateY(48px) rotateX(14deg);transform-origin:50% 0;
@@ -263,7 +263,7 @@ background:radial-gradient(circle at var(--gx,50%) var(--gy,50%),rgba(255,255,25
 html.t3gl a.card,html.t3gl .edpc,html.t3gl .s671,html.t3gl .edtd{box-shadow:0 12px 30px rgba(0,0,0,.45),inset 0 1px 0 rgba(255,255,255,.07)}
 .logo b{text-shadow:0 0 18px rgba(253,230,138,.35)}
 .t3nm{color:var(--h,#fff);font-weight:inherit;white-space:nowrap}.t3nm b{color:var(--mov);font-weight:inherit}
-@media(max-width:700px){.t3stage{height:20vh;min-height:110px}.t3stage.home{height:30vh;min-height:170px}}
+@media(max-width:700px){.t3stage{height:20vh;min-height:110px}.t3stage.home{height:8vh;min-height:60px}}
 @media(prefers-reduced-motion:reduce){.t3r{opacity:1;transform:none;transition:none}}
 /* [29zz742] first paint already in THETEEP3's look (no THETEEP2 flash); the page shows when the 3D layer is ready (at most 3 s) */
 html.t3pre{background:#060914}html.t3pre:not(.t3gl) body{background:#060914!important}html.t3pre body::before,html.t3pre body::after{display:none!important}
