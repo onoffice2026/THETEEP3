@@ -4480,3 +4480,4 @@ three/build/three.module.js:
    * SPDX-License-Identifier: MIT
    *)
 */
+;(function(){/* [29zz792] her 01:06: the category button of the page we are on is grey (LIVE never) */function m(){try{var p=location.pathname.replace(/\/+$/,"");document.querySelectorAll("a.cnav").forEach(function(a){if(/\blv726\b/.test(a.className))return;var h=new URL(a.getAttribute("href"),location.href).pathname.replace(/\/+$/,"");if(h===p||p.indexOf(h.replace(/\.html$/,"-"))===0)a.classList.add("t3cur")})}catch(e){}}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",m);else m()})();
