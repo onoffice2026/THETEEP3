@@ -265,6 +265,8 @@ html.t3gl a.card,html.t3gl .edpc,html.t3gl .s671,html.t3gl .edtd{box-shadow:0 12
 .logo b{text-shadow:0 0 18px rgba(253,230,138,.35)}
 .t3nm{color:var(--h,#fff);font-weight:inherit;white-space:nowrap}.t3nm b{color:var(--mov);font-weight:inherit}
 @media(max-width:700px){.t3stage{height:20vh;min-height:110px}.t3stage.home{height:11vh;min-height:75px}}
+/* [29zz797] her 02:34: the country standings (edition blocks) a little lower on every country */
+html.t3gl section.edbl{margin-top:9vh}@media(max-width:700px){html.t3gl section.edbl{margin-top:5vh}}
 @media(prefers-reduced-motion:reduce){.t3r{opacity:1;transform:none;transition:none}}
 /* [29zz742] first paint already in THETEEP3's look (no THETEEP2 flash); the page shows when the 3D layer is ready (at most 3 s) */
 html.t3pre{background:#060914}html.t3pre:not(.t3gl) body{background:#060914!important}html.t3pre body::before,html.t3pre body::after{display:none!important}
