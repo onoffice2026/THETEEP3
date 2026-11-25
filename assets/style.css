@@ -250,14 +250,16 @@ html.t3gl{background:#060914;--pan:rgba(12,17,36,.17);--pan2:rgba(17,24,48,.21);
    (backdrop-filter blur 16px on .card/.box/.pred/.hero smears the stadium into a flat dark slab, whatever the tint) - off on THETEEP3;
    the tint back near THETEEP2's own (.05) instead of THETEEP3's .18; a soft text shadow keeps the text readable over the stadium */
 html.t3gl .card,html.t3gl .box,html.t3gl .pred,html.t3gl .hero,html.t3gl .spside,html.t3gl .edpc,html.t3gl .s671,html.t3gl .edtd,html.t3gl .cart,html.t3gl .cclub,html.t3gl .carch{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
-html.t3gl main{text-shadow:0 1px 2px rgba(0,0,0,.75),0 0 8px rgba(0,0,0,.35)}
+/* [29zz832] her 19:26 "animatia ... iar usor sacadat": cheaper layer over the live stadium - one fine text shadow (no 8px blur),
+   one thin outline on the big numbers (no 5px blur), the header without backdrop blur (it was re-blurred every frame) */
+html.t3gl main{text-shadow:0 1px 2px rgba(0,0,0,.8)}
 /* [29zz826] her 14:09 'cifra de rating ... prea transparenta si ilizibila': the reading shadow of 821 showed THROUGH the gradient-clipped
    text (rating number, scorer / form big numbers) and greyed it - those texts get no text shadow, a drop-shadow outline instead, brighter colours */
-html.t3gl .rtg678 .r1 b,html.t3gl .sfc .sfo,html.t3gl .sfc .sfdg,html.t3gl .t2c .t2sc{text-shadow:none!important;filter:drop-shadow(0 1px 1px rgba(0,0,0,.9)) drop-shadow(0 0 5px rgba(0,0,0,.5))}
+html.t3gl .rtg678 .r1 b,html.t3gl .sfc .sfo,html.t3gl .sfc .sfdg,html.t3gl .t2c .t2sc{text-shadow:none!important;filter:drop-shadow(0 1px 1px rgba(0,0,0,.9))}
 html.t3gl .rtg678 .r1 b{background:linear-gradient(90deg,#ede9fe,#f5d0fe 55%,#fde68a);-webkit-background-clip:text;background-clip:text}
 html.t3gl .rtg678{background:linear-gradient(135deg,rgba(12,17,36,.55),rgba(12,17,36,.35))}
 html.t3gl .rtg678 .r2 b{color:#fff}html.t3gl .rtg678 .r3,html.t3gl .rtg678 small{color:#c7cce0}
-html.t3pre header,html.t3gl header{background:rgba(6,9,20,.55)!important;-webkit-backdrop-filter:blur(12px) saturate(1.3);backdrop-filter:blur(12px) saturate(1.3);border-bottom:1px solid rgba(253,230,138,.18)!important}
+html.t3pre header,html.t3gl header{background:rgba(6,9,20,.9)!important;-webkit-backdrop-filter:none!important;backdrop-filter:none!important;border-bottom:1px solid rgba(253,230,138,.18)!important}
 html.t3gl footer{background:rgba(6,9,20,.7)}
 .t3stage{position:relative;height:30vh;min-height:150px;pointer-events:none}
 a.cnav.t3cur{background:#4b5563!important;color:#e5e7eb!important;border-radius:8px;padding:2px 8px;pointer-events:none}
