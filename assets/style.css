@@ -244,7 +244,12 @@ background:linear-gradient(180deg,#ffffff 0%,#e6e9ed 38%,#a3aab3 52%,#d5d9de 70%
 #t3veil{position:fixed;inset:0;z-index:-1;pointer-events:none;--vt:.12;background:linear-gradient(180deg,rgba(6,9,20,var(--vt)) 0,rgba(6,9,20,var(--vt)) 24vh,rgba(6,9,20,.48) 60vh,rgba(6,9,20,.58) 100%)}
 html.t3gl body{background:transparent!important}
 html.t3gl body::before,html.t3gl body::after{display:none!important}
-html.t3gl{background:#060914;--pan:rgba(12,17,36,.18);--pan2:rgba(17,24,48,.24);--bd:rgba(255,255,255,.12)}
+html.t3gl{background:#060914;--pan:rgba(12,17,36,.07);--pan2:rgba(17,24,48,.09);--bd:rgba(255,255,255,.16)}
+/* [29zz821] her 03:13 "inca nu s-a rezolvat ... gaseste solutia reala": the cards looked solid because of the Aurora theme's frosted glass
+   (backdrop-filter blur 16px on .card/.box/.pred/.hero smears the stadium into a flat dark slab, whatever the tint) - off on THETEEP3;
+   the tint back near THETEEP2's own (.05) instead of THETEEP3's .18; a soft text shadow keeps the text readable over the stadium */
+html.t3gl .card,html.t3gl .box,html.t3gl .pred,html.t3gl .hero,html.t3gl .spside,html.t3gl .edpc,html.t3gl .s671,html.t3gl .edtd,html.t3gl .cart,html.t3gl .cclub,html.t3gl .carch{-webkit-backdrop-filter:none!important;backdrop-filter:none!important}
+html.t3gl main{text-shadow:0 1px 2px rgba(0,0,0,.75),0 0 8px rgba(0,0,0,.35)}
 html.t3pre header,html.t3gl header{background:rgba(6,9,20,.55)!important;-webkit-backdrop-filter:blur(12px) saturate(1.3);backdrop-filter:blur(12px) saturate(1.3);border-bottom:1px solid rgba(253,230,138,.18)!important}
 html.t3gl footer{background:rgba(6,9,20,.7)}
 .t3stage{position:relative;height:30vh;min-height:150px;pointer-events:none}
