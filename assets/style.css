@@ -287,30 +287,37 @@ html.t3pre{background:#060914}html.t3pre:not(.t3gl) body{background:#060914!impo
 html.t3pre main,html.t3pre footer{opacity:0;animation:t3safe .01s 3s forwards}html.t3pre.t3ready main,html.t3pre.t3ready footer{opacity:1;animation:none;transition:opacity .45s ease}
 @keyframes t3safe{to{opacity:1}}
 
-/* [29zz851] THETEEP3 ticket generator */
+/* [29zz851] THETEEP3 ticket generator; [29zz856] 2 per row, delete icon, created line, live scores, golden light on the odds */
 .t3gen{margin:34px 0 18px;padding:16px 18px;border-radius:16px;background:var(--pan,rgba(12,17,36,.17));border:1px solid var(--bd,rgba(255,255,255,.16))}
 .t3gen h2{margin:0 0 4px}.t3gen .t3gr{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:10px}
 .t3gen label{font-size:13px;color:#c7cce0}.t3gen input{width:110px;padding:8px 10px;border-radius:10px;border:1px solid rgba(253,230,138,.35);
-background:rgba(6,9,20,.55);color:#fff;font:700 15px/1.2 var(--ff,system-ui,sans-serif);text-align:center}
+background:rgba(6,9,20,.55);color:#fff;font-weight:700;font-size:15px;line-height:1.2;font-family:var(--ff,system-ui,sans-serif);text-align:center}
 .t3gen .t3min{font-size:13px;color:#c7cce0}.t3gen .t3min b{color:#fde68a}
-.t3gen button.t3go{padding:10px 26px;border:0;border-radius:12px;cursor:pointer;font:800 14px/1 var(--ff,system-ui,sans-serif);letter-spacing:2px;color:#0b0f1e;
+.t3gen button.t3go{padding:10px 26px;border:0;border-radius:12px;cursor:pointer;font-weight:800;font-size:14px;line-height:1;font-family:var(--ff,system-ui,sans-serif);letter-spacing:2px;color:#0b0f1e;
 background:linear-gradient(90deg,#fde68a,#f5c84c 50%,#c4b5fd);box-shadow:0 0 0 1px rgba(253,230,138,.5),0 8px 26px rgba(245,200,76,.28)}
 .t3gen button.t3go:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .t3gen .t3msg{margin-top:10px;font-size:13px;color:#fca5a5;min-height:1em}
-.t3tks{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:22px;margin:18px 0 30px}
-.t3tk{position:relative;border-radius:20px;padding:18px 18px 14px;color:#fff;overflow:hidden;isolation:isolate;
+.t3tks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:18px 0 30px}
+.t3tk{position:relative;border-radius:20px;padding:18px 18px 14px;color:#fff;overflow:hidden;isolation:isolate;text-shadow:none!important;
 background:radial-gradient(120% 80% at 0% 0%,rgba(196,181,253,.22),transparent 55%),radial-gradient(120% 90% at 100% 100%,rgba(253,230,138,.16),transparent 55%),
 linear-gradient(160deg,rgba(14,19,40,.94),rgba(9,12,28,.96));box-shadow:0 22px 50px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08)}
 .t3tk::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;z-index:-1;
 background:conic-gradient(from var(--t3a,0deg),#fde68a,#c4b5fd,#22d3ee,#fde68a);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
 -webkit-mask-composite:xor;mask-composite:exclude;animation:t3spin 6s linear infinite}
 @property --t3a{syntax:"<angle>";initial-value:0deg;inherits:false}@keyframes t3spin{to{--t3a:360deg}}
-.t3tk .t3hd{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.t3tk .t3lg{font:900 15px/1 var(--ff,system-ui,sans-serif);letter-spacing:2px}.t3tk .t3lg b{color:var(--mov,#c4b5fd)}
+.t3tk .t3hd{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-right:30px}
+.t3tk .t3lg{font-weight:900;font-size:15px;line-height:1;letter-spacing:2px}.t3tk .t3lg b{color:var(--mov,#c4b5fd)}
 .t3tk .t3sr{font:700 11px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:1.5px;color:#fde68a;padding:5px 8px;border-radius:8px;border:1px dashed rgba(253,230,138,.45)}
-.t3tk .t3big{margin:14px 0 6px;font:900 42px/1 var(--ff,system-ui,sans-serif);letter-spacing:1px;background:linear-gradient(90deg,#fff,#fde68a 45%,#f5c84c);
--webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 2px 10px rgba(245,200,76,.25))}
-.t3tk .t3big small{font-size:13px;letter-spacing:2px;color:#c7cce0;-webkit-text-fill-color:#c7cce0;margin-left:6px}
+.t3tk .t3cr{margin-top:8px;font-size:11px;letter-spacing:1px;color:#c7cce0}.t3tk .t3cr b{color:#fff}
+.t3tk .t3x{position:absolute;top:12px;right:12px;width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(6,9,20,.6);
+color:#e5e7eb;font-size:15px;line-height:24px;text-align:center;cursor:pointer;padding:0;z-index:2}
+.t3tk .t3x:hover{background:#dc2626;border-color:#dc2626;color:#fff}
+.t3gold{background:linear-gradient(100deg,#a87908 0%,#f5c84c 22%,#fff6c8 30%,#ffffff 33%,#fde68a 37%,#e0a91a 52%,#f5c84c 70%,#a87908 100%);
+background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+animation:t3shine 3.4s cubic-bezier(.45,.05,.55,.95) infinite;filter:drop-shadow(0 0 5px rgba(253,216,106,.55)) drop-shadow(0 1px 1px rgba(0,0,0,.6))}
+@keyframes t3shine{0%{background-position:130% 0}60%,100%{background-position:-30% 0}}
+.t3tk .t3big{margin:12px 0 6px;font-weight:900;font-size:42px;line-height:1;letter-spacing:1px}
+.t3tk .t3big small{font-size:13px;letter-spacing:2px;color:#c7cce0;-webkit-text-fill-color:#c7cce0;margin-left:6px;font-weight:700}
 .t3tk .t3k4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 12px}
 .t3tk .t3k4 div{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:6px 4px;text-align:center}
 .t3tk .t3k4 small{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#9aa3c0}.t3tk .t3k4 b{font-size:14px}
@@ -321,15 +328,19 @@ radial-gradient(circle at 100% 50%,#060914 7px,transparent 7.5px)}
 .t3tk li{counter-increment:t3l;display:grid;grid-template-columns:22px 1fr auto;gap:2px 8px;padding:7px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:13px}
 .t3tk li::before{content:counter(t3l);grid-row:span 2;align-self:center;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;
 font-size:10px;font-weight:800;background:rgba(196,181,253,.18);color:#e9d5ff}
-.t3tk li.w::before{background:#16a34a;color:#fff}.t3tk li.l::before{background:#dc2626;color:#fff}
-.t3tk li .t3mm{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.t3tk li .t3o{font-weight:800;color:#fde68a;text-align:right}
+.t3tk li.w::before{background:#16a34a;color:#fff}.t3tk li.l::before{background:#dc2626;color:#fff}.t3tk li.v::before{background:#6b7280;color:#fff}
+.t3tk li .t3mm{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.t3tk li .t3o{font-weight:800;font-size:14px;text-align:right}
 .t3tk li .t3tp{color:#c4b5fd;font-size:12px}.t3tk li .t3ko{color:#9aa3c0;font-size:11px;text-align:right;white-space:nowrap}
+.t3tk li .t3src{font-size:10px;color:#fde68a;border:1px solid rgba(253,230,138,.4);border-radius:6px;padding:0 4px;margin-left:4px}
+.t3tk li .t3lv{color:#4ade80;font-weight:800}.t3tk li .t3lv i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ef4444;margin-right:4px;animation:t3blink 1.2s infinite}
+@keyframes t3blink{50%{opacity:.2}}
+.t3tk li .t3fs{font-weight:800;color:#fff}
 .t3tk .t3ft{display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:11px;color:#9aa3c0}
-.t3tk .t3del{background:none;border:0;color:#9aa3c0;cursor:pointer;font-size:11px;text-decoration:underline}
-.t3tk .t3kst{position:absolute;top:62px;right:16px;transform:rotate(-12deg);font:900 22px/1 var(--ff,system-ui,sans-serif);letter-spacing:3px;padding:6px 12px;
+.t3tk .t3kst{position:absolute;top:66px;right:16px;transform:rotate(-12deg);font-weight:900;font-size:22px;line-height:1;letter-spacing:3px;padding:6px 12px;
 border:3px solid currentColor;border-radius:10px;opacity:.92}
-.t3tk .t3kst.p{color:#fde68a;opacity:.55;font-size:14px}.t3tk .t3kst.w{color:#22c55e;text-shadow:0 0 14px rgba(34,197,94,.5)}
-.t3tk .t3kst.l{color:#ef4444;text-shadow:0 0 14px rgba(239,68,68,.5)}
+.t3tk .t3kst.p{color:#fde68a;opacity:.55;font-size:14px}.t3tk .t3kst.w{color:#22c55e;text-shadow:0 0 14px rgba(34,197,94,.5)!important}
+.t3tk .t3kst.l{color:#ef4444;text-shadow:0 0 14px rgba(239,68,68,.5)!important}
 .t3tk.won{box-shadow:0 0 0 1px rgba(34,197,94,.45),0 22px 50px rgba(0,0,0,.55),0 0 40px rgba(34,197,94,.18)}
 .t3tk.lost{filter:saturate(.75)}
-@media(max-width:700px){.t3tks{grid-template-columns:1fr}.t3tk .t3big{font-size:34px}}
+@media(max-width:760px){.t3tks{grid-template-columns:1fr}.t3tk .t3big{font-size:34px}}
+@media(prefers-reduced-motion:reduce){.t3gold{animation:none}}
