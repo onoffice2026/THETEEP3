@@ -292,15 +292,15 @@ html.t3pre main,html.t3pre footer{opacity:0;animation:t3safe .01s 3s forwards}ht
 .t3gen h2{margin:0 0 4px}.t3gen .t3gr{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:10px}
 .t3gen label{font-size:13px;color:#c7cce0}.t3gen input{width:110px;padding:8px 10px;border-radius:10px;border:1px solid rgba(253,230,138,.35);
 background:rgba(6,9,20,.55);color:#fff;font-weight:700;font-size:15px;line-height:1.2;font-family:var(--ff,system-ui,sans-serif);text-align:center}
-.t3gen .t3min{font-size:13px;color:#c7cce0}.t3gen .t3min b{color:#fde68a}
+.t3gen .t3min{font-size:13px;color:#c7cce0;min-width:150px}.t3gen .t3gr button.t3go{margin-left:auto;min-width:150px}.t3gen .t3min b{color:#fde68a}
 .t3gen button.t3go{padding:10px 26px;border:0;border-radius:12px;cursor:pointer;font-weight:800;font-size:14px;line-height:1;font-family:var(--ff,system-ui,sans-serif);letter-spacing:2px;color:#0b0f1e;
 background:linear-gradient(90deg,#fde68a,#f5c84c 50%,#c4b5fd);box-shadow:0 0 0 1px rgba(253,230,138,.5),0 8px 26px rgba(245,200,76,.28)}
 .t3gen button.t3go:hover{filter:brightness(1.08);transform:translateY(-1px)}
 .t3gen .t3msg{margin-top:10px;font-size:13px;color:#fca5a5;min-height:1em}
 .t3tks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin:18px 0 30px}
 .t3tk{position:relative;border-radius:20px;padding:18px 18px 14px;color:#fff;overflow:hidden;isolation:isolate;text-shadow:none!important;
-background:radial-gradient(120% 80% at 0% 0%,rgba(196,181,253,.22),transparent 55%),radial-gradient(120% 90% at 100% 100%,rgba(253,230,138,.16),transparent 55%),
-linear-gradient(160deg,rgba(14,19,40,.94),rgba(9,12,28,.96));box-shadow:0 22px 50px rgba(0,0,0,.55),inset 0 1px 0 rgba(255,255,255,.08)}
+background:radial-gradient(120% 80% at 0% 0%,rgba(196,181,253,.14),transparent 55%),radial-gradient(120% 90% at 100% 100%,rgba(253,230,138,.10),transparent 55%),
+linear-gradient(160deg,rgba(14,19,40,.40),rgba(9,12,28,.48));-webkit-backdrop-filter:blur(7px);backdrop-filter:blur(7px);box-shadow:0 22px 50px rgba(0,0,0,.35),inset 0 1px 0 rgba(255,255,255,.08)}
 .t3tk::before{content:"";position:absolute;inset:0;border-radius:inherit;padding:1.5px;z-index:-1;
 background:conic-gradient(from var(--t3a,0deg),#fde68a,#c4b5fd,#22d3ee,#fde68a);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);
 -webkit-mask-composite:xor;mask-composite:exclude;animation:t3spin 6s linear infinite}
@@ -322,7 +322,7 @@ text-shadow:none!important;filter:drop-shadow(0 0 5px rgba(253,224,130,.45));ani
 .t3tk .t3big{margin:12px 0 6px;font-weight:900;font-size:42px;line-height:1;letter-spacing:1px}
 .t3tk .t3big small{font-size:13px;letter-spacing:2px;color:#c7cce0;-webkit-text-fill-color:#c7cce0;margin-left:6px;font-weight:700}
 .t3tk .t3k4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 12px}
-.t3tk .t3k4 div{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:6px 4px;text-align:center}
+.t3tk .t3k4 div{background:rgba(6,9,20,.28);border:1px solid rgba(255,255,255,.08);border-radius:10px;padding:6px 4px;text-align:center}
 .t3tk .t3k4 small{display:block;font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#9aa3c0}.t3tk .t3k4 b{font-size:14px}
 .t3tk .t3perf{position:relative;height:14px;margin:4px -18px 8px;background:radial-gradient(circle at 0 50%,#060914 7px,transparent 7.5px),
 radial-gradient(circle at 100% 50%,#060914 7px,transparent 7.5px)}
@@ -343,7 +343,7 @@ font-size:10px;font-weight:800;background:rgba(196,181,253,.18);color:#e9d5ff}
 border:3px solid currentColor;border-radius:10px;opacity:.92}
 .t3tk .t3kst.p{color:#fde68a;opacity:.55;font-size:14px}.t3tk .t3kst.w{color:#22c55e;text-shadow:0 0 14px rgba(34,197,94,.5)!important}
 .t3tk .t3kst.l{color:#ef4444;text-shadow:0 0 14px rgba(239,68,68,.5)!important}
-.t3tk.won{box-shadow:0 0 0 1px rgba(34,197,94,.45),0 22px 50px rgba(0,0,0,.55),0 0 40px rgba(34,197,94,.18)}
+.t3tk.won{box-shadow:0 0 0 1px rgba(34,197,94,.45),0 22px 50px rgba(0,0,0,.35),0 0 40px rgba(34,197,94,.18)}
 .t3tk.lost{filter:saturate(.75)}
 @media(max-width:760px){.t3tks{grid-template-columns:1fr}.t3tk .t3big{font-size:34px}}
 @media(prefers-reduced-motion:reduce){.t3gold{animation:none;background-position:50% 0}}
