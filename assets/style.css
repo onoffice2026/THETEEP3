@@ -307,15 +307,18 @@ background:conic-gradient(from var(--t3a,0deg),#fde68a,#c4b5fd,#22d3ee,#fde68a);
 @property --t3a{syntax:"<angle>";initial-value:0deg;inherits:false}@keyframes t3spin{to{--t3a:360deg}}
 .t3tk .t3hd{display:flex;justify-content:space-between;align-items:center;gap:10px;padding-right:30px}
 .t3tk .t3lg{font-weight:900;font-size:15px;line-height:1;letter-spacing:2px}.t3tk .t3lg b{color:var(--mov,#c4b5fd)}
+.t3tk .t3gnb{font-size:10px;letter-spacing:1px;color:#0b0f1e;background:linear-gradient(90deg,#fde68a,#c4b5fd);border-radius:6px;padding:2px 6px;margin-left:6px;vertical-align:middle}
+.t3gen2{margin-top:14px}
 .t3tk .t3sr{font:700 11px/1 ui-monospace,Menlo,Consolas,monospace;letter-spacing:1.5px;color:#fde68a;padding:5px 8px;border-radius:8px;border:1px dashed rgba(253,230,138,.45)}
 .t3tk .t3cr{margin-top:8px;font-size:11px;letter-spacing:1px;color:#c7cce0}.t3tk .t3cr b{color:#fff}
 .t3tk .t3x{position:absolute;top:12px;right:12px;width:26px;height:26px;border-radius:50%;border:1px solid rgba(255,255,255,.22);background:rgba(6,9,20,.6);
 color:#e5e7eb;font-size:15px;line-height:24px;text-align:center;cursor:pointer;padding:0;z-index:2}
 .t3tk .t3x:hover{background:#dc2626;border-color:#dc2626;color:#fff}
-.t3gold{background:linear-gradient(100deg,#a87908 0%,#f5c84c 22%,#fff6c8 30%,#ffffff 33%,#fde68a 37%,#e0a91a 52%,#f5c84c 70%,#a87908 100%);
-background-size:260% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
-animation:t3shine 3.4s cubic-bezier(.45,.05,.55,.95) infinite;filter:drop-shadow(0 0 5px rgba(253,216,106,.55)) drop-shadow(0 1px 1px rgba(0,0,0,.6))}
-@keyframes t3shine{0%{background-position:130% 0}60%,100%{background-position:-30% 0}}
+.t3gold{background:linear-gradient(105deg,#f6d36b 0%,#fde68a 38%,#fff8dc 46%,#ffffff 50%,#fff8dc 54%,#fde68a 62%,#f6d36b 100%);
+background-size:320% 100%;background-position:100% 0;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;
+text-shadow:none!important;filter:drop-shadow(0 0 5px rgba(253,224,130,.45));animation:t3shine 3.6s ease-in-out infinite,t3glint 3.6s ease-in-out infinite}
+@keyframes t3shine{0%{background-position:100% 0}55%,100%{background-position:0% 0}}
+@keyframes t3glint{0%,20%,60%,100%{filter:drop-shadow(0 0 4px rgba(253,224,130,.40))}35%{filter:drop-shadow(0 0 9px rgba(255,236,170,.85))}}
 .t3tk .t3big{margin:12px 0 6px;font-weight:900;font-size:42px;line-height:1;letter-spacing:1px}
 .t3tk .t3big small{font-size:13px;letter-spacing:2px;color:#c7cce0;-webkit-text-fill-color:#c7cce0;margin-left:6px;font-weight:700}
 .t3tk .t3k4{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin:8px 0 12px}
@@ -343,4 +346,4 @@ border:3px solid currentColor;border-radius:10px;opacity:.92}
 .t3tk.won{box-shadow:0 0 0 1px rgba(34,197,94,.45),0 22px 50px rgba(0,0,0,.55),0 0 40px rgba(34,197,94,.18)}
 .t3tk.lost{filter:saturate(.75)}
 @media(max-width:760px){.t3tks{grid-template-columns:1fr}.t3tk .t3big{font-size:34px}}
-@media(prefers-reduced-motion:reduce){.t3gold{animation:none}}
+@media(prefers-reduced-motion:reduce){.t3gold{animation:none;background-position:50% 0}}
