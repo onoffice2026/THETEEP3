@@ -74,12 +74,18 @@ function html(tk){var t=T,s=tk.s,lb_={w:t[10],l:t[11],p:t[12]}[s],d=new Date(tk.
   if(x.fs)ko='<span class="t3fs">'+x.fs[0]+'-'+x.fs[1]+'</span>';else if(x.r===2)ko=es(t[21]);
   else if(lv&&lv.st=='in')ko='<span class="t3lv"><i></i>'+es(lv.cl||t[19])+' '+lv.h+'-'+lv.a+'</span>';
   else ko=cet(x.ko,{weekday:'short',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit',hour12:false})+' CET';
-  h+='<li class="'+(x.r===1?'w':x.r===0?'l':x.r===2?'v':'')+'"><span class="t3mm">'+es(x.cp)+'</span><span class="t3o"><span class="t3gold">'+x.o.toFixed(2)+'</span></span>'
+  h+='<li class="'+(x.r===1?'w':x.r===0?'l':x.r===2?'v':'')+'"><span class="t3mm"><span class="t3mn">'+es(x.cp)+'</span><button class="t3cp" type="button" title="Copy" aria-label="Copy" data-cp="'+es(x.cp)+'">'+ICP+'</button></span><span class="t3o"><span class="t3gold">'+x.o.toFixed(2)+'</span></span>'
   +'<span class="t3tp">'+es(lab(x))+' · '+Math.round(x.p*100)+'%'+(x.s?'<span class="t3src">'+es(x.s)+'</span>':'')+'</span><span class="t3ko">'+ko+'</span></li>'});
  h+='</ol><div class="t3ft"><span>'+es(t[1])+' '+fo(tk.lo)+' '+es(t[2])+' '+fo(tk.hi)+' · '+es(t[3])+' '+MIN.toFixed(2)+'</span></div></div>';return h}
 function draw(){var A=ld().map(st);sv(A);var now=Date.now(),act=A.filter(function(x){return now<cut(x.ts)}),old=A.filter(function(x){return now>=cut(x.ts)});
  var a=document.getElementById('t3tka');if(a)a.innerHTML=act.slice().reverse().map(html).join('');
  var b=document.getElementById('t3tkr');if(b)b.innerHTML=old.length?old.slice().reverse().map(html).join(''):'<p class="mut small">'+es(T[15])+'</p>'}
+var ICP='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>',
+ IOK='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12l5 5L20 7"/></svg>';
+function cpy(t,b){function ok(){b.classList.add('ok');b.innerHTML=IOK;setTimeout(function(){b.classList.remove('ok');b.innerHTML=ICP},1200)}
+ function fb(){try{var a=document.createElement('textarea');a.value=t;a.setAttribute('readonly','');a.style.position='fixed';a.style.opacity='0';document.body.appendChild(a);a.select();
+ document.execCommand('copy');document.body.removeChild(a);ok()}catch(e){}}
+ if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(ok,fb);else fb()}
 function gj(u){return fetch(u,{cache:'no-store'}).then(function(r){return r.ok?r.json():null}).catch(function(){return null})}
 function live(){var now=Date.now(),Q={};ld().forEach(function(tk){tk.L.forEach(function(x){if(!x.eid||!x.lg||x.r===1||x.r===0)return;var ko=Date.parse(x.ko);
  if(now<ko-5*60000||now>ko+4*3600000)return;var d=new Date(ko),z=function(n){return ('0'+n).slice(-2)},dd=d.getUTCFullYear()+z(d.getUTCMonth()+1)+z(d.getUTCDate());Q[x.lg+'|'+dd]=1})});
@@ -96,9 +102,10 @@ document.addEventListener('click',function(ev){var g=ev.target.closest&&ev.targe
  var lo2=parseFloat((document.getElementById('t3lo2').value||'').replace(',','.')),hi2=parseFloat((document.getElementById('t3hi2').value||'').replace(',','.')),m2=document.getElementById('t3msg2');
  if(!(lo2>1)||!(hi2>=lo2)){m2.textContent=T[24];return}var tk2=gen2(lo2,hi2);if(tk2.err!==undefined){m2.textContent=tk2.few!==undefined?T[25].replace('{n}',tk2.few):T[26].replace('{a}',fo(lo2)).replace('{b}',fo(hi2)).replace('{t}',fo(tk2.err));return}
  m2.textContent='';var A2=ld();A2.push(tk2);sv(A2);draw();var a2=document.getElementById('t3tka');if(a2&&a2.firstChild&&a2.firstChild.scrollIntoView)a2.firstChild.scrollIntoView({behavior:'smooth',block:'center'});return}
+ var cb=ev.target.closest&&ev.target.closest('.t3cp');if(cb){ev.preventDefault();ev.stopPropagation();cpy(cb.getAttribute('data-cp')||'',cb);return}
  var dl=ev.target.closest&&ev.target.closest('.t3x');if(dl){ev.preventDefault();var s=dl.getAttribute('data-sr');sv(ld().filter(function(x){return x.sr!==s}));draw()}});
 draw();res();setInterval(res,300000);
-})();</script></main><footer><div class="w">Alleen informatie. Geen links naar bookmakers, geen aanbiedingen. 18+. Gokken kan verslavend zijn - speel verantwoord.<br><a href="../nl/privacy.html">Privacy</a> · <a href="../nl/responsible-gambling.html">Verantwoord spelen</a> · <a href="../nl/contact.html">Contact</a> · Bijgewerkt 2026-11-27 16:50 CET</div></footer><script src="../assets/star.js?v=2026-10-31zz888"></script><script>(function(){function nk(s){return (s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')}
+})();</script></main><footer><div class="w">Alleen informatie. Geen links naar bookmakers, geen aanbiedingen. 18+. Gokken kan verslavend zijn - speel verantwoord.<br><a href="../nl/privacy.html">Privacy</a> · <a href="../nl/responsible-gambling.html">Verantwoord spelen</a> · <a href="../nl/contact.html">Contact</a> · Bijgewerkt 2026-11-27 17:55 CET</div></footer><script src="../assets/star.js?v=2026-10-31zz888"></script><script>(function(){function nk(s){return (s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]/g,'')}
 var S=null,seen=new WeakSet();
 function data(){try{return (0,eval)('typeof D!=="undefined"?D:null')}catch(e){return null}}
 function lista(){if(window.TT2S)return new Set(window.TT2S);var DX=data();if(!DX||!DX.meciuri)return null;var s=new Set();

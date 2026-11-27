@@ -332,7 +332,11 @@ radial-gradient(circle at 100% 50%,#060914 7px,transparent 7.5px)}
 .t3tk li::before{content:counter(t3l);grid-row:span 2;align-self:center;width:20px;height:20px;border-radius:50%;display:grid;place-items:center;
 font-size:10px;font-weight:800;background:rgba(196,181,253,.18);color:#e9d5ff}
 .t3tk li.w::before{background:#16a34a;color:#fff}.t3tk li.l::before{background:#dc2626;color:#fff}.t3tk li.v::before{background:#6b7280;color:#fff}
-.t3tk li .t3mm{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.t3tk li .t3o{font-weight:800;font-size:14px;text-align:right}
+.t3tk li .t3mm{font-weight:700;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.t3tk li .t3mm{display:flex;align-items:center;gap:6px;min-width:0}.t3tk li .t3mn{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.t3tk li .t3cp{flex:0 0 auto;width:20px;height:20px;padding:0;border-radius:6px;border:1px solid rgba(255,255,255,.22);background:rgba(6,9,20,.45);color:#c7cce0;
+cursor:pointer;display:inline-grid;place-items:center;transition:border-color .15s,color .15s}.t3tk li .t3cp:hover{border-color:#c4b5fd;color:#fff}
+.t3tk li .t3cp.ok{border-color:#22c55e;color:#22c55e}.t3tk li .t3cp svg{width:12px;height:12px;display:block}.t3tk li .t3o{font-weight:800;font-size:14px;text-align:right}
 .t3tk li .t3tp{color:#c4b5fd;font-size:12px}.t3tk li .t3ko{color:#9aa3c0;font-size:11px;text-align:right;white-space:nowrap}
 .t3tk li .t3src{font-size:10px;color:#fde68a;border:1px solid rgba(253,230,138,.4);border-radius:6px;padding:0 4px;margin-left:4px}
 .t3tk li .t3lv{color:#4ade80;font-weight:800}.t3tk li .t3lv i{display:inline-block;width:7px;height:7px;border-radius:50%;background:#ef4444;margin-right:4px;animation:t3blink 1.2s infinite}
